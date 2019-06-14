@@ -10,13 +10,14 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 50px;
 }
 
 .App-link {
@@ -30,4 +31,107 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav {
+  position: absolute;
+  top: 20px;
+  display: flex;
+}
+
+.nav > div {
+  color: #9b59b6;
+}
+.nav > div:hover {
+  transition: color 200ms;
+  cursor: pointer;
+  color: #eab8ff;
+}
+
+.nav > * + * {
+  margin-left: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.row > * + * {
+  margin-left: 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 50px;
+  border-radius: 5px;
+  background: #3498db;
+  border: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button.square {
+  width: 50px;
+}
+
+.button.red {
+  background: #e74c3c;
+}
+.button.green {
+  background: #2ecc71;
+}
+
+.button:active {
+  box-shadow: inset 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.article {
+  display: block;
+  width: 600px;
+  text-align: justify;
+}
+
+.toggle-container {
+  border: solid 2px;
+  width: 100px;
+  height: 52px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle {
+  width: 46px;
+  height: 46px;
+  border-radius: 25px;
+  margin-left: 0;
+  transition: all 200ms;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.toggle {
+  background: #27ae60;
+  margin-left: 4px;
+}
+
+.active > .toggle {
+  background: #c0392b;
+  margin-left: 51px;
 }
